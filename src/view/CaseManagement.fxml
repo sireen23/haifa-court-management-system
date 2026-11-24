@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="599.0" prefWidth="704.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.CaseManagementController">
+   <children>
+      <TabPane layoutY="81.0" prefHeight="518.0" prefWidth="704.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Cases Overview">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="490.0" prefWidth="704.0" style="-fx-background-color: #E9E9E9;">
+                     <children>
+                        <TableView fx:id="casesTable" layoutX="197.0" layoutY="106.0" prefHeight="324.0" prefWidth="470.0" style="-fx-background-color: #F5F5F5;">
+                           <columns>
+                              <TableColumn fx:id="codeColumn" prefWidth="75.0" text="Code" />
+                              <TableColumn fx:id="typeColumn" prefWidth="75.0" text="Type" />
+                              <TableColumn fx:id="statusColumn" prefWidth="75.0" text="Status" />
+                              <TableColumn fx:id="openDateColumn" prefWidth="75.0" text="Open Date" />
+                              <TableColumn fx:id="accusedColumn" prefWidth="75.0" text="Accused" />
+                              <TableColumn fx:id="lawyerColumn" prefWidth="75.0" text="Lawyer" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="197.0" layoutY="20.0" text="Search Categories : ">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="date" layoutX="337.0" layoutY="43.0" prefHeight="26.0" prefWidth="134.0" promptText="Case Open Date" />
+                        <AnchorPane fx:id="filteringAnchorPane" layoutX="-1.0" layoutY="-2.0" prefHeight="489.0" prefWidth="171.0" style="-fx-background-color: #F3F3F3;">
+                           <children>
+                              <Label layoutX="48.0" layoutY="19.0" text="Filtering">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Line endX="39.39997863769531" endY="1.1444091796875E-5" layoutX="115.0" layoutY="49.0" startX="-100.0" style="-fx-stroke: #D9D9D9;" />
+                              <Line endX="39.39997863769531" endY="1.1444091796875E-5" layoutX="115.0" layoutY="98.0" startX="-100.0" style="-fx-stroke: #D9D9D9;" />
+                              <Label layoutX="26.0" layoutY="109.0" text="Case Type">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Line endX="39.39997863769531" endY="1.1444091796875E-5" layoutX="115.0" layoutY="222.0" startX="-100.0" style="-fx-stroke: #D9D9D9;" />
+                              <Label layoutX="26.0" layoutY="230.0" text="Case Status">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="18.0" fitWidth="16.0" layoutX="26.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/filter%20(1).png" />
+                                 </image>
+                              </ImageView>
+                              <VBox layoutX="37.0" layoutY="136.0" prefHeight="83.0" prefWidth="126.0" spacing="8.0">
+                                 <children>
+                                    <CheckBox fx:id="criminal" mnemonicParsing="false" text="Criminal Cases" />
+                                    <CheckBox fx:id="family" mnemonicParsing="false" text="Family Cases" />
+                                    <CheckBox fx:id="financial" mnemonicParsing="false" text="Financial Cases" />
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="37.0" layoutY="258.0" prefHeight="62.0" prefWidth="126.0" spacing="8.0">
+                                 <children>
+                                    <CheckBox fx:id="inProcess" mnemonicParsing="false" text="In Proces Cases" />
+                                    <CheckBox fx:id="finished" mnemonicParsing="false" text="Finished Cases" />
+                                    <CheckBox fx:id="canceled" mnemonicParsing="false" text="Cnceled Cases" />
+                                 </children>
+                              </VBox>
+                              <ImageView fitHeight="99.0" fitWidth="99.0" layoutX="36.0" layoutY="385.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/case2.png" />
+                                 </image>
+                              </ImageView>
+                              <CheckBox fx:id="allCases" layoutX="37.0" layoutY="65.0" mnemonicParsing="false" text="Display All Cases" />
+                              <Button fx:id="filter" layoutX="28.0" layoutY="350.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="120.0" style="-fx-background-color: #3688FF; -fx-cursor: hand;" text="FILTER" />
+                           </children>
+                        </AnchorPane>
+                        <Button fx:id="deleteCase" layoutX="372.0" layoutY="449.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="120.0" style="-fx-background-color: #3688FF; -fx-cursor: hand;" text="Remove Case" />
+                        <ComboBox fx:id="specialization" layoutX="479.0" layoutY="44.0" prefWidth="134.0" promptText="Specialization" />
+                        <Line endX="358.199951171875" layoutX="309.0" layoutY="86.0" startX="-111.4000244140625" style=": ;" />
+                        <ImageView fx:id="search" fitHeight="44.0" fitWidth="39.0" layoutX="629.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+                           <image>
+                              <Image url="@../resources/paper.png" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="accusedName" layoutX="197.0" layoutY="43.0" prefHeight="26.0" prefWidth="134.0" promptText="Accused Name" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="addNewCase" style="ba: #C2D7E5;" text="Add New Case">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #E4EEF4;">
+                     <children>
+                        <TabPane layoutY="108.0" prefHeight="382.0" prefWidth="704.0" tabClosingPolicy="UNAVAILABLE">
+                          <tabs>
+                            <Tab text="Add Criminal Case">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="401.0" prefWidth="704.0">
+                                       <children>
+                                          <ComboBox fx:id="type1" layoutX="163.0" layoutY="167.0" prefHeight="0.0" prefWidth="174.0" />
+                                          <DatePicker fx:id="openDate1" layoutX="161.0" layoutY="82.0" prefHeight="0.0" prefWidth="174.0" />
+                                          <ComboBox fx:id="verdict1" layoutX="163.0" layoutY="250.0" prefHeight="0.0" prefWidth="174.0" />
+                                          <ComboBox fx:id="lawyer1" layoutX="163.0" layoutY="208.0" prefHeight="0.0" prefWidth="174.0" />
+                                          <ComboBox fx:id="status1" layoutX="162.0" layoutY="125.0" prefHeight="0.0" prefWidth="174.0" />
+                                          <ComboBox fx:id="accused1" layoutX="163.0" layoutY="42.0" prefHeight="0.0" prefWidth="174.0" />
+                                          <Label layoutX="50.0" layoutY="44.0" text="Accused ">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="50.0" layoutY="85.0" text="Open Date">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="50.0" layoutY="127.0" text="Case Status">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="50.0" layoutY="169.0" text="Case Type">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="50.0" layoutY="210.0" text="Lawyer">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="50.0" layoutY="252.0" text="Verdict">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="387.0" layoutY="44.0" text="Victim">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <ComboBox fx:id="victim1" layoutX="504.0" layoutY="42.0" prefHeight="26.0" prefWidth="174.0" />
+                                          <Label layoutX="387.0" layoutY="84.0" text="Crime Scene">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="387.0" layoutY="138.0" text="Crime Tool">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="scene" layoutX="505.0" layoutY="82.0" prefWidth="174.0" />
+                                          <TextArea fx:id="crimeTool" layoutX="480.0" layoutY="121.0" prefHeight="106.0" prefWidth="200.0" />
+                                          <Button fx:id="addCriminalCase" layoutX="344.0" layoutY="302.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="137.0" text="ADD Criminal Case">
+                                             <font>
+                                                <Font name="System Bold" size="13.0" />
+                                             </font>
+                                          </Button>
+                                          <Button fx:id="reset1" layoutX="223.0" layoutY="302.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="105.0" text="RESET">
+                                             <font>
+                                                <Font name="System Bold" size="13.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                            <Tab text="Add Financial Case">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <ComboBox fx:id="type2" layoutX="163.0" layoutY="155.0" prefHeight="0.0" prefWidth="174.0" />
+                                          <DatePicker fx:id="openDate2" layoutX="163.0" layoutY="70.0" prefHeight="0.0" prefWidth="174.0" />
+                                          <ComboBox fx:id="verdict2" layoutX="163.0" layoutY="238.0" prefHeight="0.0" prefWidth="174.0" />
+                                          <ComboBox fx:id="lawyer2" layoutX="163.0" layoutY="196.0" prefHeight="0.0" prefWidth="174.0" />
+                                          <ComboBox fx:id="status2" layoutX="163.0" layoutY="113.0" prefHeight="0.0" prefWidth="174.0" />
+                                          <ComboBox fx:id="accused2" layoutX="163.0" layoutY="30.0" prefHeight="0.0" prefWidth="174.0" />
+                                          <Label layoutX="50.0" layoutY="32.0" text="Accused ">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="50.0" layoutY="73.0" text="Open Date">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="50.0" layoutY="115.0" text="Case Status">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="50.0" layoutY="157.0" text="Case Type">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="50.0" layoutY="198.0" text="Lawyer">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="50.0" layoutY="240.0" text="Verdict">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Button fx:id="addFinancialCase" layoutX="344.0" layoutY="302.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="137.0" text="ADD Financial Case">
+                                             <font>
+                                                <Font name="System Bold" size="13.0" />
+                                             </font>
+                                          </Button>
+                                          <Button fx:id="reset2" layoutX="223.0" layoutY="302.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="105.0" text="RESET">
+                                             <font>
+                                                <Font name="System Bold" size="13.0" />
+                                             </font>
+                                          </Button>
+                                          <Label layoutX="363.0" layoutY="32.0" text="Losses Amount">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="363.0" layoutY="73.0" text="Damaged Item">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="lossAmount" layoutX="487.0" layoutY="29.0" prefHeight="26.0" prefWidth="174.0" />
+                                          <TextField fx:id="damagedItem" layoutX="487.0" layoutY="70.0" prefHeight="26.0" prefWidth="174.0" />
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                              <Tab text="Add Family Case">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <ComboBox fx:id="type3" layoutX="154.0" layoutY="154.0" prefHeight="0.0" prefWidth="174.0" />
+                                          <DatePicker fx:id="openDate3" layoutX="152.0" layoutY="69.0" prefHeight="0.0" prefWidth="174.0" />
+                                          <ComboBox fx:id="verdict3" layoutX="154.0" layoutY="237.0" prefHeight="0.0" prefWidth="174.0" />
+                                          <ComboBox fx:id="lawyer3" layoutX="154.0" layoutY="195.0" prefHeight="0.0" prefWidth="174.0" />
+                                          <ComboBox fx:id="status3" layoutX="153.0" layoutY="112.0" prefHeight="0.0" prefWidth="174.0" />
+                                          <ComboBox fx:id="accused3" layoutX="154.0" layoutY="29.0" prefHeight="0.0" prefWidth="174.0" />
+                                          <Label layoutX="41.0" layoutY="31.0" text="Accused ">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="41.0" layoutY="72.0" text="Open Date">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="41.0" layoutY="114.0" text="Case Status">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="41.0" layoutY="156.0" text="Case Type">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="41.0" layoutY="197.0" text="Lawyer">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="41.0" layoutY="239.0" text="Verdict">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Button fx:id="addFamilyCase" layoutX="344.0" layoutY="302.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="137.0" text="ADD Family Case">
+                                             <font>
+                                                <Font name="System Bold" size="13.0" />
+                                             </font>
+                                          </Button>
+                                          <Button fx:id="reset3" layoutX="223.0" layoutY="302.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="105.0" text="RESET">
+                                             <font>
+                                                <Font name="System Bold" size="13.0" />
+                                             </font>
+                                          </Button>
+                                          <Label layoutX="381.0" layoutY="33.0" text="Victim">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <ComboBox fx:id="victim2" layoutX="498.0" layoutY="31.0" prefHeight="26.0" prefWidth="174.0" />
+                                          <Label layoutX="381.0" layoutY="73.0" text="Relation Type">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="relationType" layoutX="499.0" layoutY="71.0" prefWidth="174.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                          </tabs>
+                        </TabPane>
+                        <ImageView fitHeight="90.0" fitWidth="100.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/case1.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="131.0" layoutY="27.0" text="Please Fill in the form to add a new Case to the System ">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="131.0" layoutY="65.0" text="All Fields Are Required !" textFill="RED" />
+                        <Label layoutX="131.0" layoutY="47.0" text="First Choose the Domain of the Case">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="caseDetailsTab" text="Case Details">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #E9E9E9;">
+                     <children>
+                        <Label layoutX="29.0" layoutY="25.0" text="Display Case Details ">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="caseIDcombobox" layoutX="31.0" layoutY="67.0" prefWidth="150.0" />
+                        <TextArea fx:id="textDetailsArea" layoutX="31.0" layoutY="109.0" prefHeight="347.0" prefWidth="646.0" />
+                        <Button fx:id="displayDetails" layoutX="196.0" layoutY="67.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="126.0" text="Details " />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="assignLawyerorJudge" text="Assign Lawyer/Judge">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ComboBox fx:id="caseCombobox" layoutX="303.0" layoutY="59.0" prefHeight="26.0" prefWidth="194.0" />
+                        <Label layoutX="30.0" layoutY="25.0" text="Assign Lawyer for Case : " />
+                        <Label layoutX="38.0" layoutY="63.0" text="Select the case you want to assign lawyer to it :" />
+                        <Label layoutX="38.0" layoutY="101.0" text="Select the lawyer you want to assign : " />
+                        <ComboBox fx:id="lawyercombobox" layoutX="303.0" layoutY="97.0" prefHeight="26.0" prefWidth="194.0" />
+                        <Button fx:id="assignlawyerButton" layoutX="234.0" layoutY="158.0" mnemonicParsing="false" text="ASSIGN LAWYER" />
+                        <Line endX="408.0" endY="1.52587890625E-5" layoutX="203.0" layoutY="217.0" startX="-111.4000244140625" style=": ;" />
+                        <Label layoutX="38.0" layoutY="236.0" text="Assign Judge for Case : " />
+                        <ComboBox fx:id="caseCombobox2" layoutX="303.0" layoutY="270.0" prefHeight="26.0" prefWidth="194.0" />
+                        <Label layoutX="38.0" layoutY="274.0" text="Select the case you want to assign Judge to it :" />
+                        <Label layoutX="38.0" layoutY="312.0" text="Assign Judge for the Case Verdict : " />
+                        <ComboBox fx:id="judgeCombobox" layoutX="303.0" layoutY="308.0" prefHeight="26.0" prefWidth="194.0" />
+                        <Button fx:id="assignjUDGEButton" layoutX="234.0" layoutY="369.0" mnemonicParsing="false" text="ASSIGN JUDGE" />
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="addAccusedTab" text="Add Accused">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox layoutX="30.0" layoutY="64.0" prefHeight="214.0" prefWidth="114.0" spacing="20.0">
+                           <children>
+                              <Label text="ID  ">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label text="First Name">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Last Name">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Birth Date">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Address">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <TextField fx:id="id" layoutX="155.0" layoutY="64.0" prefWidth="186.0" />
+                        <TextField fx:id="firstName" layoutX="155.0" layoutY="104.0" prefWidth="186.0" />
+                        <TextField fx:id="lastName" layoutX="155.0" layoutY="144.0" prefWidth="186.0" />
+                        <DatePicker fx:id="birthDate" layoutX="155.0" layoutY="186.0" prefHeight="26.0" prefWidth="186.0" />
+                        <TextField fx:id="address" layoutX="155.0" layoutY="228.0" prefWidth="186.0" />
+                        <TextField fx:id="phoneNumber" layoutX="487.0" layoutY="64.0" prefWidth="186.0" />
+                        <TextField fx:id="email" layoutX="487.0" layoutY="108.0" prefWidth="186.0" />
+                        <TextField fx:id="job" layoutX="487.0" layoutY="189.0" prefWidth="186.0" />
+                        <ComboBox fx:id="gender" layoutX="487.0" layoutY="148.0" prefWidth="186.0" />
+                        <Button fx:id="resetAccused" layoutX="208.0" layoutY="277.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="134.0" text="RESET" />
+                        <Button fx:id="addAccused" layoutX="361.0" layoutY="277.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="135.0" text="ADD ACCUSED" />
+                        <Label layoutX="376.0" layoutY="64.0" prefHeight="22.0" prefWidth="119.0" text="Phone Number">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="376.0" layoutY="105.0" text="Email">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="376.0" layoutY="147.0" text="Gender">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="376.0" layoutY="189.0" text="Job">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="tab6" text="Update Case">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="29.0" layoutY="12.0" text="Select The Case You Want To Edit">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="tab6casescombobox" layoutX="29.0" layoutY="51.0" prefHeight="26.0" prefWidth="252.0" />
+                        <Button fx:id="tab6displayButton" layoutX="293.0" layoutY="52.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="134.0" text="DISPLAY" />
+                        <AnchorPane fx:id="dynamicFieldsAnchorpane" layoutX="14.0" layoutY="85.0" prefHeight="269.0" prefWidth="328.0">
+                           <children>
+                              <ComboBox fx:id="tab6specialization" layoutX="139.0" layoutY="153.0" prefHeight="0.0" prefWidth="174.0" />
+                              <DatePicker fx:id="tab6Date" layoutX="137.0" layoutY="68.0" prefHeight="0.0" prefWidth="174.0" />
+                              <ComboBox fx:id="tab6verdict" layoutX="139.0" layoutY="236.0" prefHeight="0.0" prefWidth="174.0" />
+                              <ComboBox fx:id="tab6lawyer" layoutX="139.0" layoutY="194.0" prefHeight="0.0" prefWidth="174.0" />
+                              <ComboBox fx:id="tab6Status" layoutX="138.0" layoutY="111.0" prefHeight="0.0" prefWidth="174.0" />
+                              <ComboBox fx:id="tab6Accused" layoutX="139.0" layoutY="28.0" prefHeight="0.0" prefWidth="174.0" />
+                              <Label layoutX="26.0" layoutY="30.0" text="Accused ">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="26.0" layoutY="71.0" text="Open Date">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="26.0" layoutY="113.0" text="Case Status">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="26.0" layoutY="155.0" text="Case Type">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="26.0" layoutY="196.0" text="Lawyer">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="26.0" layoutY="238.0" text="Verdict">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="criminalAnchorpane" layoutX="361.0" layoutY="114.0" prefHeight="144.0" prefWidth="314.0">
+                           <children>
+                              <Label layoutX="11.0" layoutY="9.0" text="Victim">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="tab6CriminalVictim" layoutX="128.0" layoutY="7.0" prefHeight="26.0" prefWidth="174.0" />
+                              <Label layoutX="11.0" layoutY="49.0" text="Crime Scene">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="11.0" layoutY="95.0" text="Crime Tool">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="tab6CriminalCrimeScene" layoutX="129.0" layoutY="47.0" prefWidth="174.0" />
+                              <TextArea fx:id="tab6CriminalCrimeTool" layoutX="129.0" layoutY="81.0" prefHeight="50.0" prefWidth="174.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="financialAnchorpane" layoutX="364.0" layoutY="250.0" prefHeight="89.0" prefWidth="302.0">
+                           <children>
+                              <Label layoutX="2.0" layoutY="17.0" text="Losses Amount">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="2.0" layoutY="58.0" text="Damaged Item">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="tab6financialLossAmount" layoutX="126.0" layoutY="14.0" prefHeight="26.0" prefWidth="174.0" />
+                              <TextField fx:id="tab6FinancialDamagedItem" layoutX="126.0" layoutY="55.0" prefHeight="26.0" prefWidth="174.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="familyAnchorpane" layoutX="36.0" layoutY="358.0" prefHeight="91.0" prefWidth="300.0">
+                           <children>
+                              <Label layoutX="4.0" layoutY="15.0" text="Victim">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="tab6FamilyVictim" layoutX="117.0" layoutY="13.0" prefHeight="26.0" prefWidth="174.0" />
+                              <Label layoutX="4.0" layoutY="55.0" text="Relation Type">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="tab6familyRelationType" layoutX="117.0" layoutY="53.0" prefWidth="174.0" />
+                           </children>
+                        </AnchorPane>
+                        <Button fx:id="tab6Update" layoutX="441.0" layoutY="358.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="154.0" text="UPDATE" />
+                        <Button fx:id="tab6Reset" layoutX="441.0" layoutY="390.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="154.0" text="RESET" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Label layoutX="71.0" layoutY="29.0" text="Case Management">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="backImage" fitHeight="39.0" fitWidth="39.0" layoutX="14.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+         <image>
+            <Image url="@../resources/previous.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

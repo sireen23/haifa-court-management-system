@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="443.0" prefWidth="810.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.LawyerQueriesController">
+   <children>
+      <AnchorPane layoutX="607.0" prefHeight="443.0" prefWidth="205.0" style="-fx-background-color: #2196F3;">
+         <children>
+            <ImageView fitHeight="443.0" fitWidth="797.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/Picture9.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Label layoutX="65.0" layoutY="21.0" text="Activate Queries">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="65.0" layoutY="51.0" text="Find Differnce Between The Longest And Shortest Case Of A Lawyer">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="16.0" layoutY="82.0" text="Please Select A Lawye :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="lawyersCombo" layoutX="183.0" layoutY="80.0" prefHeight="26.0" prefWidth="278.0" promptText="Select Lawyer" />
+      <Label fx:id="query1Result" layoutX="60.0" layoutY="122.0" text="The Difference is : ">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Line endX="345.0" endY="1.52587890625E-5" layoutX="117.0" layoutY="169.0" startX="-100.0" />
+      <Label layoutX="14.0" layoutY="206.0" text="Find Family Cases With Witnesses From Both Sides">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TableView fx:id="casesOfBothSidesWitnesses" layoutX="14.0" layoutY="241.0" prefHeight="165.0" prefWidth="574.0">
+         <columns>
+            <TableColumn fx:id="code1" prefWidth="75.0" text="Code" />
+            <TableColumn fx:id="openDate1" prefWidth="99.99994659423828" text="Open Date" />
+            <TableColumn fx:id="status1" prefWidth="82.39996337890625" text="Status" />
+            <TableColumn fx:id="specialization1" prefWidth="94.39996337890625" text="Specialization" />
+            <TableColumn fx:id="lawyer1" prefWidth="73.5999755859375" text="Lawyer" />
+            <TableColumn fx:id="verdict1" prefWidth="77.60000610351562" text="Verdict" />
+            <TableColumn fx:id="accused1" prefWidth="68.0" text="Accused" />
+         </columns>
+      </TableView>
+      <Button fx:id="activateQuery1" layoutX="484.0" layoutY="81.0" mnemonicParsing="false" text="ACTIVATE" />
+      <ImageView fx:id="backImage" fitHeight="47.0" fitWidth="44.0" layoutX="14.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+         <image>
+            <Image url="@../resources/previous.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

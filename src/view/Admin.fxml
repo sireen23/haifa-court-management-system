@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="457.0" prefWidth="674.0" style="-fx-background-color: #162131;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.AdminController">
+   <children>
+      <ImageView fitHeight="34.0" fitWidth="75.0" layoutX="24.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/firm%20(1)%20(1).png" />
+         </image>
+      </ImageView>
+      <Label layoutX="35.0" layoutY="57.0" text="ADMIN Page" textFill="#bb945b">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#bb945b" height="15.0" layoutX="137.0" layoutY="32.0" stroke="BLACK" strokeType="INSIDE" width="537.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#bb945b" height="5.0" layoutX="137.0" layoutY="54.0" stroke="BLACK" strokeType="INSIDE" width="537.0" />
+      <ImageView fitHeight="337.0" fitWidth="348.0" layoutY="127.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/DALL·E%202025-02-16%2001.42.17%20-%20A%20highly%20detailed%20and%20visually%20striking%20golden%20statue%20of%20Lady%20Justice,%20symbolizing%20the%20court%20system.%20The%20statue%20features%20an%20elegant,%20modern%20design%20wit.png" />
+         </image>
+      </ImageView>
+      <HBox layoutX="235.0" layoutY="66.0" prefHeight="19.0" prefWidth="310.0" spacing="20.0">
+         <children>
+            <Label fx:id="addID" style="-fx-cursor: hand;" text="ADD &gt;" textFill="#bb945b">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets right="20.0" />
+               </padding>
+            </Label>
+            <Label fx:id="removeID" graphicTextGap="10.0" style="-fx-cursor: hand;" text="REMOVE &gt;" textFill="#bb945b">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <padding>
+                  <Insets right="20.0" />
+               </padding>
+            </Label>
+            <Label fx:id="displayDataVBOX" style="-fx-cursor: hand;" text="DISPLAY DATA &gt;" textFill="#bb945b">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <VBox fx:id="addVBOX" layoutX="256.0" layoutY="83.0" prefHeight="62.0" prefWidth="100.0">
+         <children>
+            <Label fx:id="addJudgeLabel" style="-fx-cursor: hand;" text="Add Judge" textFill="#bb945b" />
+            <Label fx:id="addLawyerLabel" style="-fx-cursor: hand;" text="Add Lawyer" textFill="#bb945b" />
+            <Label fx:id="addEmployee" style="-fx-cursor: hand;" text="Add Employee" textFill="#bb945b" />
+         </children>
+      </VBox>
+      <VBox fx:id="removeVBOX" layoutX="355.0" layoutY="83.0" prefHeight="62.0" prefWidth="100.0">
+         <children>
+            <Label fx:id="removeJudge" style="-fx-cursor: hand;" text="Remove Judge" textFill="#bb945b" />
+            <Label fx:id="removeLawyer" style="-fx-cursor: hand;" text="Remove Lawyer" textFill="#bb945b" />
+            <Label fx:id="removeEmployee" style="-fx-cursor: hand;" text="Remove Employee" textFill="#bb945b" />
+         </children>
+      </VBox>
+      <ImageView fx:id="logout" fitHeight="30.0" fitWidth="38.0" layoutX="630.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+         <image>
+            <Image url="@../resources/fffffffffff.png" />
+         </image>
+      </ImageView>
+      <VBox fx:id="datVBOX" layoutX="478.0" layoutY="83.0" prefHeight="62.0" prefWidth="100.0">
+         <children>
+            <Label fx:id="accused" style="-fx-cursor: hand;" text="Accuseds" textFill="#bb945b" />
+            <Label fx:id="appeals" style="-fx-cursor: hand;" text="Appeals" textFill="#bb945b" />
+            <Label fx:id="familyCases" style="-fx-cursor: hand;" text="Family Cases" textFill="#bb945b" />
+            <Label fx:id="financialCases" style="-fx-cursor: hand;" text="Financial Cases" textFill="#bb945b" />
+            <Label fx:id="criminalCases" style="-fx-cursor: hand;" text="Criminal Cases" textFill="#bb945b" />
+            <Label fx:id="courtrooms" style="-fx-cursor: hand;" text="Courtrooms" textFill="#bb945b" />
+            <Label fx:id="departments" style="-fx-cursor: hand;" text="Departments" textFill="#bb945b" />
+            <Label fx:id="documents" style="-fx-cursor: hand;" text="Documents" textFill="#bb945b" />
+            <Label fx:id="employees" style="-fx-cursor: hand;" text="Employees" textFill="#bb945b" />
+            <Label fx:id="judges" style="-fx-cursor: hand;" text="Judges" textFill="#bb945b" />
+            <Label fx:id="lawyers" style="-fx-cursor: hand;" text="Lawyers" textFill="#bb945b" />
+            <Label fx:id="meetings" style="-fx-cursor: hand;" text="Meetings" textFill="#bb945b" />
+            <Label fx:id="testimonies" style="-fx-cursor: hand;" text="Testimonies" textFill="#bb945b" />
+            <Label fx:id="verdicts" style="-fx-cursor: hand;" text="Verdicts" textFill="#bb945b" />
+            <Label fx:id="witnesses" style="-fx-cursor: hand;" text="Witnesses" textFill="#bb945b" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

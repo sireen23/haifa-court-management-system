@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="483.0" prefWidth="808.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.AccusedsController">
+   <children>
+      <TableView fx:id="familyCasesTable" layoutX="18.0" layoutY="153.0" prefHeight="306.0" prefWidth="771.0">
+         <columns>
+            <TableColumn fx:id="code" prefWidth="75.0" text="Code" />
+            <TableColumn fx:id="accusedID" prefWidth="75.0" text="Accused ID" />
+            <TableColumn fx:id="openDate" prefWidth="75.0" text="Open Date" />
+            <TableColumn fx:id="status" prefWidth="86.39996337890625" text="Status" />
+            <TableColumn fx:id="specialization" prefWidth="88.79998779296875" text="Specialization" />
+            <TableColumn fx:id="lawyerID" prefWidth="100.7999267578125" text="Lawyer ID" />
+            <TableColumn fx:id="verdictID" prefWidth="83.99993896484375" text="Verdict ID" />
+            <TableColumn fx:id="victimID" prefWidth="79.20001220703125" text="Victim ID" />
+            <TableColumn fx:id="relationType" prefWidth="107.199951171875" text="Relation Type" />
+         </columns>
+      </TableView>
+      <AnchorPane prefHeight="120.0" prefWidth="808.0" style="-fx-background-color: #87C5F9;">
+         <children>
+            <ImageView fx:id="backImage" fitHeight="52.0" fitWidth="52.0" layoutX="32.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+               <image>
+                  <Image url="@../resources/previous.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="101.0" layoutY="44.0" text="Cases Information">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

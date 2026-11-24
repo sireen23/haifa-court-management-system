@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="661.0" style="-fx-background-color: #1D1D1D;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.JudgeController">
+   <children>
+      <Circle fill="#1d1d1d" layoutX="339.0" layoutY="196.0" radius="102.0" stroke="#1d1d1d" strokeType="INSIDE" />
+      <MediaView fx:id="mediaView" fitHeight="430.0" fitWidth="661.0" layoutX="2.0" />
+      <ImageView fx:id="profileImage" fitHeight="58.0" fitWidth="55.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../uploaded_images/default_image.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="judgeNameLabel" layoutX="82.0" layoutY="25.0" text="First &#10;Name" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="349.0" fitWidth="358.0" layoutX="155.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/flash.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="326.0" fitWidth="333.0" layoutX="167.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/judge.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="52.0" layoutY="319.0" prefHeight="90.0" prefWidth="573.0" style="-fx-background-color: #302F2B; -fx-background-radius: 15;">
+         <children>
+            <Label fx:id="manageCases" layoutX="33.0" layoutY="24.0" style="-fx-cursor: hand;" text="Manage&#10;Cases" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="scheduleMeeting" layoutX="158.0" layoutY="24.0" style="-fx-cursor: hand;" text="Scheduling&#10;Meetings&#10;" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="verdictsAndAppeals" layoutX="302.0" layoutY="24.0" style="-fx-cursor: hand;" text="Manage Verdicts&#10;and Appeals" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="judgeQueries" layoutX="484.0" layoutY="24.0" style="-fx-cursor: hand;" text="Execute&#10;Queries&#10;" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Line endX="-99.99998474121094" endY="-50.500030517578125" layoutX="222.0" layoutY="76.0" startX="-100.0" style="-fx-stroke: #BFBFBF;" />
+            <Line endX="-99.99998474121094" endY="-50.500030517578125" layoutX="367.0" layoutY="75.0" startX="-100.0" style="-fx-stroke: #BFBFBF;" />
+            <Line endX="-99.99998474121094" endY="-50.500030517578125" layoutX="547.0" layoutY="75.0" startX="-100.0" style="-fx-stroke: #BFBFBF;" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="52.0" layoutY="318.0" prefHeight="10.0" prefWidth="573.0" style="-fx-background-color: #F5CD7E;" />
+      <ImageView fx:id="calendar" fitHeight="80.0" fitWidth="88.0" layoutX="559.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+         <image>
+            <Image url="@../resources/DALL·E%202025-03-08%2018.49.32%20-%20A%20simple%20and%20clean%20golden%20circular%20button%20designed%20for%20UI%20usage.%20Inside%20the%20button,%20there%20is%20a%20straightforward%20and%20easily%20recognizable%20calendar%20icon%20w.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="logout" fitHeight="40.0" fitWidth="39.0" layoutX="613.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+         <image>
+            <Image url="@../resources/logout.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="611.0" prefWidth="1020.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.LawyersController">
+   <children>
+      <TableView fx:id="lawyersTable" layoutX="19.0" layoutY="155.0" prefHeight="434.0" prefWidth="981.0">
+         <columns>
+            <TableColumn fx:id="id" prefWidth="51.199978828430176" text="ID" />
+            <TableColumn fx:id="imageColumn" prefWidth="51.199978828430176" text="Image" />
+            <TableColumn fx:id="firstName" prefWidth="79.99999618530273" text="First Name" />
+            <TableColumn fx:id="lastName" prefWidth="75.20001220703125" text="Last Name" />
+            <TableColumn fx:id="birthDate" prefWidth="88.80006408691406" text="Birth Date" />
+            <TableColumn fx:id="address" prefWidth="83.20001220703125" text="Address" />
+            <TableColumn fx:id="phoneNumber" prefWidth="108.7999267578125" text="Phone Number" />
+            <TableColumn fx:id="email" prefWidth="79.20001220703125" text="Email" />
+            <TableColumn fx:id="gender" prefWidth="60.0" text="Gender" />
+            <TableColumn fx:id="specialization" prefWidth="115.20001220703125" text="Specialization" />
+            <TableColumn fx:id="licenseNumber" prefWidth="106.4000244140625" text="Licence Number" />
+            <TableColumn fx:id="salary" prefWidth="76.0" text="Salary" />
+         </columns>
+      </TableView>
+      <AnchorPane prefHeight="120.0" prefWidth="1020.0" style="-fx-background-color: #87C5F9;">
+         <children>
+            <ImageView fx:id="backImage" fitHeight="52.0" fitWidth="52.0" layoutX="32.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+               <image>
+                  <Image url="@../resources/previous.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="101.0" layoutY="44.0" text="Lawyers Information">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

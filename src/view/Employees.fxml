@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="547.0" prefWidth="1001.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.EmployeesController">
+   <children>
+      <TableView fx:id="employeesTable" layoutX="11.0" layoutY="155.0" prefHeight="378.0" prefWidth="979.0">
+         <columns>
+            <TableColumn fx:id="id" prefWidth="75.0" text="ID" />
+            <TableColumn fx:id="imageColumn" prefWidth="75.0" text="Image" />
+            <TableColumn fx:id="firstName" prefWidth="75.0" text="First Name" />
+            <TableColumn fx:id="lastName" prefWidth="75.0" text="Last Name" />
+            <TableColumn fx:id="birthDate" prefWidth="97.5999755859375" text="Birth Date" />
+            <TableColumn fx:id="address" prefWidth="77.5999755859375" text="Address" />
+            <TableColumn fx:id="phoneNumber" prefWidth="109.60003662109375" text="Phone Number" />
+            <TableColumn fx:id="email" prefWidth="76.0" text="Email" />
+            <TableColumn fx:id="gender" prefWidth="64.800048828125" text="Gender" />
+            <TableColumn fx:id="workStartDate" prefWidth="107.20001220703125" text="Work Start Date" />
+            <TableColumn fx:id="salary" prefWidth="75.199951171875" text="Salary" />
+            <TableColumn fx:id="position" prefWidth="82.4000244140625" text="Position" />
+         </columns>
+      </TableView>
+      <AnchorPane prefHeight="120.0" prefWidth="1001.0" style="-fx-background-color: #87C5F9;">
+         <children>
+            <ImageView fx:id="backImage" fitHeight="52.0" fitWidth="52.0" layoutX="32.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+               <image>
+                  <Image url="@../resources/previous.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="101.0" layoutY="44.0" text="Employees Information">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="716.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.MeetingsController">
+   <children>
+      <TableView fx:id="meetingsTable" layoutX="62.0" layoutY="154.0" prefHeight="353.0" prefWidth="591.0">
+        <columns>
+          <TableColumn fx:id="meetingID" prefWidth="112.80001831054688" text="Meeting ID" />
+          <TableColumn fx:id="date" prefWidth="147.2000274658203" text="Meeting Date" />
+            <TableColumn fx:id="hour" prefWidth="101.5999755859375" text="Hour" />
+            <TableColumn fx:id="courtroom" prefWidth="116.00006103515625" text="Courtroom" />
+            <TableColumn fx:id="caseID" prefWidth="113.60003662109375" text="Case ID" />
+        </columns>
+      </TableView>
+      <AnchorPane prefHeight="120.0" prefWidth="716.0" style="-fx-background-color: #87C5F9;">
+         <children>
+            <ImageView fx:id="backImage" fitHeight="52.0" fitWidth="52.0" layoutX="32.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+               <image>
+                  <Image url="@../resources/previous.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="101.0" layoutY="44.0" text="Meetings Information">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

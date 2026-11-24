@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="716.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.TestimoniesController">
+   <children>
+      <TableView fx:id="testimoniesTable" layoutX="62.0" layoutY="154.0" prefHeight="353.0" prefWidth="591.0">
+         <columns>
+            <TableColumn fx:id="testimonyID" prefWidth="107.20001983642578" text="Testimony ID" />
+            <TableColumn fx:id="caseID" prefWidth="110.39996337890625" text="Case ID" />
+            <TableColumn fx:id="content" prefWidth="262.3999938964844" text="Content" />
+            <TableColumn fx:id="witnessID" prefWidth="111.99993896484375" text="Witness ID" />
+         </columns>
+      </TableView>
+      <AnchorPane prefHeight="120.0" prefWidth="716.0" style="-fx-background-color: #87C5F9;">
+         <children>
+            <ImageView fx:id="backImage" fitHeight="52.0" fitWidth="52.0" layoutX="32.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+               <image>
+                  <Image url="@../resources/previous.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="101.0" layoutY="44.0" text="Testimonies Information">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

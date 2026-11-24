@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="568.0" prefWidth="940.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.MainController">
+   <children>
+      <!-- Container Pane for Video -->
+      <AnchorPane fx:id="videoPane" prefHeight="568.0" prefWidth="940.0">
+         <children>
+            <MediaView fx:id="mediaView" fitHeight="568.0" fitWidth="940.0" AnchorPane.rightAnchor="0.0" />
+            <ImageView fitHeight="94.0" fitWidth="97.0" layoutX="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="101.0" layoutY="24.0" text="HRS Court Management " textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="101.0" layoutY="47.0" text="System" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="loginIcon" fitHeight="59.0" fitWidth="66.0" layoutX="75.0" layoutY="146.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+               <image>
+                  <Image url="@../resources/login.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="publicVerdictImage" fitHeight="94.0" fitWidth="66.0" layoutX="75.0" layoutY="261.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+               <image>
+                  <Image url="@../resources/verdict.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="testimonyDocumantationIcon" fitHeight="83.0" fitWidth="66.0" layoutX="75.0" layoutY="408.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+               <image>
+                  <Image url="@../resources/testimony.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="loginLabel" layoutX="152.0" layoutY="152.0" style="-fx-cursor: hand;" text="LOGIN&#10;to the System" textFill="#fbf0c4">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="publicVerdictLabel" layoutX="152.0" layoutY="283.0" style="-fx-cursor: hand;" text="Verdict&#10;Viewing Screen" textFill="#fbf0c4">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="testimonyLabel" layoutX="152.0" layoutY="430.0" style="-fx-cursor: hand;" text="Testimony &#10;Documentation Screen" textFill="#fbf0c4">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="loginTab" layoutX="565.0" layoutY="29.0" style="-fx-cursor: hand;" text="LOGIN" textFill="WHITE" />
+            <Label fx:id="verdictTab" layoutX="623.0" layoutY="29.0" style="-fx-cursor: hand;" text="Verdict Screen" textFill="WHITE" />
+            <Label fx:id="testimonyTab" layoutX="721.0" layoutY="29.0" style="-fx-cursor: hand;" text="Testimony Documentation Screen" textFill="WHITE" />
+            <Label layoutX="611.0" layoutY="29.0" text="|" textFill="WHITE" />
+            <Label layoutX="707.0" layoutY="29.0" text="|" textFill="WHITE" />
+            <Label fx:id="mainTab" layoutX="517.0" layoutY="29.0" style="-fx-cursor: hand;" text="MAIN" textFill="#e9b57b" />
+            <Label layoutX="555.0" layoutY="29.0" text="|" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

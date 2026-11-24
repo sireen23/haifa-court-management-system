@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox spacing="10" style="-fx-background-color: #ffffff; -fx-padding: 10px; -fx-border-color: #e0e0e0; -fx-border-radius: 5px;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1">
+    <!-- Meeting Icon -->
+    <ImageView fx:id="meetingIcon" fitHeight="40" fitWidth="40" />
+
+    <!-- Meeting Details -->
+    <VBox>
+        <Label fx:id="meetingTitle" style="-fx-font-weight: bold; -fx-font-size: 14px;" />
+        <Label fx:id="meetingDetails" style="-fx-font-size: 12px; -fx-text-fill: #757575;" />
+    </VBox>
+</HBox>

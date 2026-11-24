@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="483.0" prefWidth="808.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.AppealsController">
+   <children>
+      <TableView fx:id="tableAcuusedes" layoutX="30.0" layoutY="155.0" prefHeight="306.0" prefWidth="750.0">
+         <columns>
+            <TableColumn fx:id="id" prefWidth="75.0" text="ID" />
+            <TableColumn fx:id="summary" prefWidth="287.20001220703125" text="Appeal Summary" />
+            <TableColumn fx:id="appealDate" prefWidth="191.20001220703125" text="Appeal Date" />
+            <TableColumn fx:id="currentVerdictID" prefWidth="101.60003662109375" text="Current Verdict" />
+            <TableColumn fx:id="newVerdictID" prefWidth="95.99993896484375" text="New Verdict" />
+         </columns>
+      </TableView>
+      <AnchorPane prefHeight="120.0" prefWidth="808.0" style="-fx-background-color: #87C5F9;">
+         <children>
+            <ImageView fx:id="backImage" fitHeight="52.0" fitWidth="52.0" layoutX="32.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+               <image>
+                  <Image url="@../resources/previous.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="101.0" layoutY="44.0" text="Appeals Information">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="545.0" prefWidth="644.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.JudgeQueriesController">
+    
+   <children>
+      <MediaView fx:id="queryMedia" fitHeight="220.0" fitWidth="644.0" layoutY="-15.0" />
+      <TabPane layoutY="154.0" prefHeight="392.0" prefWidth="644.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="tab1" text="Cases with Testimonies From Same Gender">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #E9E9E9;">
+                     <children>
+                        <Label layoutX="82.0" layoutY="14.0" prefHeight="22.0" prefWidth="496.0" text="Find Cases With More Than Three Testimonies From Same Gender.......">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="genderCombobox" layoutX="199.0" layoutY="45.0" prefHeight="26.0" prefWidth="208.0" />
+                        <Label layoutX="82.0" layoutY="48.0" text="Select Gender">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="findByGender" layoutX="428.0" layoutY="45.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="156.0" text=" FIND">
+                           <graphic>
+                              <ImageView fitHeight="19.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/magnifying-glass.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <TableView fx:id="casesByGender" layoutX="49.0" layoutY="87.0" prefHeight="220.0" prefWidth="546.0">
+                           <columns>
+                              <TableColumn fx:id="code" prefWidth="75.0" text="Code" />
+                              <TableColumn fx:id="openDate" prefWidth="101.59998321533203" text="Open Date" />
+                              <TableColumn fx:id="status" prefWidth="77.60003662109375" text="Status" />
+                              <TableColumn fx:id="specialization" prefWidth="94.39996337890625" text="Specialization" />
+                              <TableColumn fx:id="lawyer" prefWidth="64.0" text="Lawyer" />
+                              <TableColumn fx:id="verdict" prefWidth="60.0" text="Verdict" />
+                              <TableColumn fx:id="accused" prefWidth="71.19998168945312" text="Accused" />
+                           </columns>
+                        </TableView>
+                        <Label fx:id="numberOfCasesByGender" layoutX="288.0" layoutY="323.0" text="Label">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="tab2" text="Find Crime Tools">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #E9E9E9;">
+                     <children>
+                        <Label layoutX="20.0" layoutY="11.0" prefHeight="22.0" prefWidth="496.0" text="Find Unique Crime Tools By Crime Scene">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="CrimeScene" layoutX="20.0" layoutY="41.0" prefHeight="76.0" prefWidth="523.0" />
+                        <ListView fx:id="crimeToolsListView" layoutX="144.0" layoutY="136.0" prefHeight="200.0" prefWidth="356.0" />
+                        <ImageView fx:id="searchCrimeTools" fitHeight="76.0" fitWidth="106.0" layoutX="554.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+                           <image>
+                              <Image url="@../resources/paper.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="tab3" text="Witnesses From Both Sides">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #E9E9E9;">
+                     <children>
+                        <Label layoutX="142.0" layoutY="32.0" prefHeight="22.0" prefWidth="358.0" text="Find Family Cases With Witnesses From Both Sides">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="casesOfBothSidesWitnesses" layoutX="35.0" layoutY="82.0" prefHeight="220.0" prefWidth="573.0">
+                           <columns>
+                              <TableColumn fx:id="code1" prefWidth="75.0" text="Code" />
+                              <TableColumn fx:id="openDate1" prefWidth="99.99994659423828" text="Open Date" />
+                              <TableColumn fx:id="status1" prefWidth="82.39996337890625" text="Status" />
+                              <TableColumn fx:id="specialization1" prefWidth="94.39996337890625" text="Specialization" />
+                              <TableColumn fx:id="lawyer1" prefWidth="73.5999755859375" text="Lawyer" />
+                              <TableColumn fx:id="verdict1" prefWidth="77.60000610351562" text="Verdict" />
+                              <TableColumn fx:id="accused1" prefWidth="68.0" text="Accused" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <ImageView fx:id="backImage" fitHeight="46.0" fitWidth="56.0" layoutX="14.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+         <image>
+            <Image url="@../resources/back.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="74.0" layoutY="98.0" text="EXECUTE QUERIES">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

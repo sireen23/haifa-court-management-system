@@ -1,0 +1,19 @@
+# Compiled Java files
+bin/
+*.class
+
+# Eclipse local settings
+.settings/
+.classpath
+
+# Generated application data
+*.ser
+
+# Dataset pending review
+INPUT.csv
+
+# Logs
+*.log
+
+# Environment variables
+.env

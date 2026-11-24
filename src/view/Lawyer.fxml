@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="513.0" prefWidth="905.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.LawyerPageController">
+   <children>
+      <MediaView fx:id="mediaView" fitHeight="513.0" fitWidth="905.0" layoutX="-1.0" />
+      <AnchorPane prefHeight="513.0" prefWidth="905.0" style="-fx-background-color: rgba(225,225,225,0.7);">
+         <children>
+            <Label layoutX="25.0" layoutY="171.0" text="Lawyer Page" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="44.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="242.0" text="Justice cannot be for one side alone, but &#10;must be for both." textFill="WHITE">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <HBox layoutX="25.0" layoutY="350.0" prefHeight="102.0" prefWidth="590.0" spacing="30.0">
+               <children>
+                  <ImageView fx:id="casesButton" fitHeight="143.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+                     <image>
+                        <Image url="@../resources/caseButton%20(1).png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="appealButton" fitHeight="96.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+                     <image>
+                        <Image url="@../resources/appealButton%20(1).png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="meetingsCalendar" fitHeight="109.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+                     <image>
+                        <Image url="@../resources/DALL·E%202025-03-06%2021.45.09%20-%20A%20simple,%20minimalist%20circular%20button%20with%20a%20white%20outer%20border,%20a%20gold%20inner%20border,%20and%20a%20white%20inner%20background.%20In%20the%20center,%20there%20is%20a%20golden%20co%201.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="activateQueries" fitHeight="156.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+                     <image>
+                        <Image url="@../resources/lawyerQuery%20(1).png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="documentsButton" fitHeight="143.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+                     <image>
+                        <Image url="@../resources/DALL·E%202025-03-06%2017.39.01%20-%20A%203D-style%20circular%20button%20with%20a%20flat%20appearance,%20designed%20for%20a%20UI%20page.%20Inside%20the%20circle,%20there%20is%20a%20gold%20document%20icon%20similar%20to%20the%20provided%20im%201.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox layoutX="51.0" layoutY="454.0" prefHeight="50.0" prefWidth="458.0" spacing="65.0">
+               <children>
+                  <Label fx:id="casesLabel" style="-fx-cursor: hand;" text="Manage&#10;Cases" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="appealLabel" style="-fx-cursor: hand;" text="Appeal &#10;Request" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="meetingsLabel" style="-fx-cursor: hand;" text="Meetings&#10;Calendar" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="queriesLabel" style="-fx-cursor: hand;" text="Activate &#10;Queries" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
+            <ImageView fx:id="profileImageView" fitHeight="80.0" fitWidth="78.0" layoutX="11.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../uploaded_images/default_image.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="manaDocumentsLabel" layoutX="555.0" layoutY="454.0" style="-fx-cursor: hand;" text="ADD&#10;Documents&#10;" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="lawyerNameLabel" layoutX="103.0" layoutY="41.0" text="Lawyer Full Name" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="530.0" fitWidth="301.0" layoutX="648.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/6e821434-d463-4fe5-bb6a-5ce221f8c557.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="logout" fitHeight="40.0" fitWidth="40.0" layoutX="851.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+         <image>
+            <Image url="@../resources/logout%20(1).png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
