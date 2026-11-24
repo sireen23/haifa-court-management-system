@@ -1,1 +1,56 @@
-\# Haifa Court Management SystemA JavaFX desktop application designed to manage court operations, legal personnel, cases, departments, and court hearings.Developed in 2025 as an academic project during my B.Sc. in Information Systems at the University of Haifa.\## Features\- Role-based login for administrators, judges, lawyers, and employees.\- Court case and department management.\- Judge, lawyer, and employee management.\- Court hearing scheduling and conflict detection.\- Case-related queries and information retrieval.\- CSV data importing.\- Persistent data storage using Java Serialization.\- Interactive graphical user interface.\## Technologies Used\- Java\- JavaFX\- FXML\- CSS\- Java Serialization\- CSV\- iText PDF\- Eclipse IDE\- Git \& GitHub\## Software Engineering Concepts\- Object-Oriented Programming (OOP)\- Inheritance and polymorphism\- Encapsulation and abstraction\- Model-View-Controller (MVC)\- Exception handling\- Data validation\- File handling and persistence\- Role-based access control\## Getting Started\### Prerequisites\- JDK 21\- JavaFX SDK 23.0.2\- Eclipse IDE\- iText PDF library 5.5.13\### Installation1\. Clone the repository.2\. Import the project into Eclipse.3\. Configure the JavaFX SDK and required libraries.4\. Configure the JavaFX VM arguments.5\. Run the main application class.\## ScreenshotsComing soon.
+# Haifa Court Management System
+
+A JavaFX desktop application designed to manage court operations, legal personnel, cases, departments, and court hearings.
+Developed in 2025 as an academic project during my B.Sc. in Information Systems at the University of Haifa.
+
+## Features
+
+- Role-based login for administrators, judges, lawyers, and employees.
+- Court case and department management.
+- Judge, lawyer, and employee management.
+- Court hearing scheduling and conflict detection.
+- Case-related queries and information retrieval.
+- CSV data importing.
+- Persistent data storage using Java Serialization.
+- Interactive graphical user interface.
+
+## Technologies Used
+
+- Java
+- JavaFX
+- FXML
+- CSS
+- Java Serialization
+- CSV
+- iText PDF
+- Eclipse IDE
+- Git & GitHub
+
+## Software Engineering Concepts
+
+- Object-Oriented Programming (OOP)
+- Inheritance and polymorphism
+- Encapsulation and abstraction
+- Model-View-Controller (MVC)
+- Exception handling
+- Data validation
+- File handling and persistence
+- Role-based access control
+
+## Getting Started
+
+### Prerequisites
+
+- JDK 21
+- JavaFX SDK 23.0.2
+- Eclipse IDE
+- iText PDF library 5.5.13
+
+### Installation
+
+1. Clone the repository.
+2. Import the project into Eclipse.
+3. Configure the JavaFX SDK and required libraries.
+4. Configure the JavaFX VM arguments.
+5. Run the main application class.
+
